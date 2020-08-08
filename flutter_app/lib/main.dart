@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutterapp/Rows.dart';
 
 void main() {
   runApp(MyLayoutApp());
@@ -19,36 +21,21 @@ class MyLayoutApp extends StatelessWidget {
           title: Text("Layout Basics"),
         ),
         body: Container(
-          color: Colors.cyan[200],
+          color: Colors.grey[200],
           height: double.infinity,
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                  color: Colors.limeAccent,
-                  height: 80,
-                  child: Center(
-                    child: Text(
-                      "Congratulations! 💐",
-                      style: TextStyle(fontSize: 35, color: Colors.blue),
-                      textAlign: TextAlign.center,
-                    ),
-                  )),
-              Padding(padding: EdgeInsets.only(top: 20)),
-              Container(
-                  color: Colors.limeAccent,
-                  height: 100,
-                  width: double.infinity,
-                  child: Center(
-                      child: Container(
-                    padding: EdgeInsets.all(12),
-                    child: Text(
-                      "Thanks for reading so far, will get more indepth concepts sooner 🎉",
-                      style: TextStyle(fontSize: 18, color: Colors.blue),
-                      textAlign: TextAlign.center,
-                    ),
-                  )))
+              FirstRow(),
+              Padding(padding: EdgeInsets.only(top: 8)),
+              SecondRow(),
+              Padding(padding: EdgeInsets.only(top: 8)),
+              ThirdRow(),
+              Padding(padding: EdgeInsets.only(top: 8)),
+              FourthRow(),
+              Padding(padding: EdgeInsets.only(top: 8)),
+              FifthRow()
             ],
           ),
           padding: EdgeInsets.all(20),
